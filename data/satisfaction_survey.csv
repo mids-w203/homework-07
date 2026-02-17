@@ -1,0 +1,131 @@
+student_id,job_satisfaction,job_meaningful,hours_classwork,has_pets
+S001,Very dissatisfied,Yes,27.0,Yes
+S002,Neutral,Yes,1.5,Yes
+S003,Somewhat satisfied,Yes,30.0,Yes
+S004,Very satisfied,No,1.5,Yes
+S005,Somewhat satisfied,Yes,5.5,Yes
+S006,Very satisfied,Yes,10.5,Yes
+S007,Somewhat dissatisfied,Yes,5.5,Yes
+S008,Somewhat satisfied,Yes,20.0,Yes
+S009,Somewhat satisfied,Yes,29.5,Yes
+S010,Somewhat satisfied,Yes,8.5,Yes
+S011,Somewhat satisfied,Yes,12.0,Yes
+S012,Very satisfied,Yes,20.5,Yes
+S013,Somewhat satisfied,Yes,19.5,Yes
+S014,Neutral,Yes,1.5,Yes
+S015,Very satisfied,Yes,6.0,Yes
+S016,Somewhat satisfied,No,9.0,Yes
+S017,Somewhat satisfied,Yes,3.0,Yes
+S018,Somewhat dissatisfied,No,1.5,Yes
+S019,Somewhat satisfied,No,8.0,Yes
+S020,Very dissatisfied,Yes,1.5,Yes
+S021,Somewhat satisfied,Yes,1.5,Yes
+S022,Somewhat satisfied,Yes,5.0,Yes
+S023,Somewhat satisfied,Yes,20.0,Yes
+S024,Extremely dissatisfied,Yes,28.0,Yes
+S025,Somewhat satisfied,Yes,9.5,Yes
+S026,Somewhat satisfied,Yes,27.5,Yes
+S027,Extremely Satisfied,Yes,3.0,Yes
+S028,Somewhat dissatisfied,No,1.5,Yes
+S029,Somewhat satisfied,Yes,6.0,Yes
+S030,Somewhat satisfied,Yes,19.0,Yes
+S031,Somewhat satisfied,No,19.0,Yes
+S032,Very dissatisfied,Yes,19.5,Yes
+S033,Somewhat dissatisfied,No,10.0,Yes
+S034,Somewhat satisfied,Yes,9.5,Yes
+S035,Somewhat satisfied,Yes,21.0,Yes
+S036,Somewhat satisfied,Yes,1.5,Yes
+S037,Somewhat satisfied,Yes,21.0,Yes
+S038,Very dissatisfied,Yes,1.5,Yes
+S039,Very dissatisfied,Yes,1.5,Yes
+S040,Somewhat dissatisfied,Yes,21.5,No
+S041,Extremely Satisfied,Sometimes,4.0,No
+S042,Neutral,Sometimes,2.0,No
+S043,Very satisfied,Yes,1.5,No
+S044,Somewhat satisfied,Sometimes,10.5,No
+S045,Very dissatisfied,Sometimes,31.0,No
+S046,Very dissatisfied,Sometimes,12.5,No
+S047,Very satisfied,Sometimes,11.5,No
+S048,Somewhat satisfied,Yes,10.0,No
+S049,Extremely Satisfied,Yes,29.0,No
+S050,Neutral,No,9.5,No
+S051,Extremely Satisfied,Sometimes,10.0,No
+S052,Somewhat dissatisfied,Yes,10.5,No
+S053,Extremely Satisfied,Yes,1.5,No
+S054,Very satisfied,Sometimes,2.0,No
+S055,Neutral,Sometimes,20.0,No
+S056,Somewhat satisfied,Sometimes,1.5,No
+S057,Neutral,Sometimes,5.5,No
+S058,Neutral,Yes,6.0,No
+S059,Somewhat dissatisfied,Yes,21.0,No
+S060,Very satisfied,Yes,11.5,No
+S061,Very satisfied,Sometimes,1.5,No
+S062,Somewhat dissatisfied,Yes,6.0,No
+S063,Somewhat dissatisfied,Sometimes,1.5,No
+S064,Extremely Satisfied,Sometimes,10.0,No
+S065,Somewhat dissatisfied,Yes,11.5,No
+S066,Very satisfied,Sometimes,5.5,No
+S067,Very satisfied,Sometimes,1.5,No
+S068,Very dissatisfied,Sometimes,9.0,No
+S069,Somewhat satisfied,Yes,21.0,No
+S070,Very satisfied,Yes,8.0,No
+S071,Extremely Satisfied,Sometimes,18.0,No
+S072,Very satisfied,No,8.5,No
+S073,Neutral,Yes,22.0,No
+S074,Extremely Satisfied,Yes,8.5,No
+S075,Somewhat dissatisfied,Sometimes,20.0,No
+S076,Somewhat dissatisfied,No,21.0,No
+S077,Extremely Satisfied,Sometimes,5.5,No
+S078,Somewhat dissatisfied,Yes,4.5,No
+S079,Very satisfied,Sometimes,7.5,No
+S080,Somewhat satisfied,Sometimes,1.5,No
+S081,Very satisfied,Yes,12.0,No
+S082,Very dissatisfied,Sometimes,7.5,No
+S083,Somewhat dissatisfied,Sometimes,22.0,No
+S084,Neutral,Yes,1.5,No
+S085,Extremely Satisfied,Yes,20.0,No
+S086,Neutral,Sometimes,10.5,No
+S087,Extremely Satisfied,Yes,5.5,No
+S088,Somewhat dissatisfied,Yes,7.0,No
+S089,Extremely Satisfied,Sometimes,10.0,No
+S090,Neutral,Yes,30.5,No
+S091,Extremely Satisfied,Sometimes,11.0,No
+S092,Somewhat dissatisfied,Sometimes,17.5,No
+S093,Extremely Satisfied,Yes,19.5,No
+S094,Somewhat dissatisfied,Sometimes,29.5,No
+S095,Somewhat dissatisfied,Yes,3.5,No
+S096,Somewhat satisfied,Sometimes,32.0,No
+S097,Extremely Satisfied,Sometimes,10.5,No
+S098,Very dissatisfied,Yes,28.5,No
+S099,Extremely Satisfied,Yes,29.5,No
+S100,Very satisfied,Yes,5.5,No
+S101,Somewhat dissatisfied,Yes,1.5,No
+S102,Extremely Satisfied,Sometimes,4.5,No
+S103,Very satisfied,Sometimes,21.5,No
+S104,Very dissatisfied,Yes,10.0,No
+S105,Somewhat satisfied,Yes,22.5,No
+S106,Extremely Satisfied,Yes,9.5,No
+S107,Very satisfied,Yes,1.5,No
+S108,Somewhat dissatisfied,Yes,1.5,No
+S109,Very dissatisfied,Sometimes,30.5,No
+S110,Somewhat dissatisfied,Sometimes,21.0,No
+S111,Very satisfied,Sometimes,22.0,No
+S112,Somewhat dissatisfied,Sometimes,30.5,No
+S113,Somewhat satisfied,Sometimes,1.5,No
+S114,Very satisfied,Sometimes,9.0,No
+S115,Neutral,Sometimes,3.5,No
+S116,Very satisfied,Yes,22.0,No
+S117,Very satisfied,Yes,10.5,No
+S118,Extremely Satisfied,Sometimes,1.5,No
+S119,Very satisfied,Yes,11.5,No
+S120,Extremely Satisfied,Yes,9.5,No
+S121,Very satisfied,Sometimes,10.5,No
+S122,Extremely Satisfied,Sometimes,11.5,No
+S123,Extremely Satisfied,Sometimes,21.0,No
+S124,Somewhat dissatisfied,Yes,29.5,No
+S125,Extremely Satisfied,Sometimes,1.5,No
+S126,Extremely Satisfied,Sometimes,19.0,No
+S127,Very dissatisfied,Sometimes,4.5,No
+S128,Very dissatisfied,Yes,32.0,No
+S129,Neutral,Yes,10.0,No
+S130,Very satisfied,Yes,7.0,No

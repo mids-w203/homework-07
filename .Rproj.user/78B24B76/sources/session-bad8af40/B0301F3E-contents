@@ -1,0 +1,16 @@
+# Sample Average is 99
+# Test against null hypothesis that population expectation is 100
+
+## Power is: 
+##   1 - false negative
+##   1 - probability you don't reject, when you should have. 
+
+## suppose that we'll reject if p < 0.05
+
+rejects <- NA 
+for( i in 1:100 ) { 
+  data <- rnorm(n=10, mean=98, sd=3)
+  rejects[i] <- t.test(x=data, mu = 100)$p.value < 0.05
+}
+
+mean(rejects)

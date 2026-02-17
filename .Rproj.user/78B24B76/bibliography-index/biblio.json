@@ -1,0 +1,105 @@
+{
+    "sources": [
+        {
+            "author": [
+                {
+                    "family": "Putnam",
+                    "given": "Robert D"
+                }
+            ],
+            "id": "putnam_2000",
+            "issued": {
+                "date-parts": [
+                    [
+                        2000
+                    ]
+                ]
+            },
+            "publisher": "Simon; schuster",
+            "title": "Bowling alone: The collapse and revival of american community",
+            "title-short": "Bowling alone",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Lee",
+                    "given": "Amber Hye-Yon"
+                }
+            ],
+            "container-title": "Political behavior",
+            "id": "lee_2022",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022
+                    ]
+                ]
+            },
+            "page": "1533-1554",
+            "publisher": "Springer",
+            "title": "Social trust in polarized times: How perceptions of political polarization affect americans’ trust in each other",
+            "title-short": "Social trust in polarized times",
+            "type": "article-journal",
+            "volume": "44"
+        },
+        {
+            "author": [
+                {
+                    "family": "Suh",
+                    "given": "Hyungjun"
+                },
+                {
+                    "family": "Yee",
+                    "given": "Jaeyeol"
+                },
+                {
+                    "family": "Chang",
+                    "given": "Dukjin"
+                }
+            ],
+            "container-title": "Development and Society",
+            "id": "suh_2013",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2013
+                    ]
+                ]
+            },
+            "page": "1-28",
+            "publisher": "JSTOR",
+            "title": "Type of trust and political participation in five countries: Results of social quality survey",
+            "title-short": "Type of trust and political participation in five countries",
+            "type": "article-journal",
+            "volume": "42"
+        },
+        {
+            "author": [
+                {
+                    "family": "Petrocik",
+                    "given": "John Richard"
+                }
+            ],
+            "container-title": "Electoral Studies",
+            "id": "petrocik_2009",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        2009
+                    ]
+                ]
+            },
+            "page": "562-572",
+            "publisher": "Elsevier",
+            "title": "Measuring party support: Leaners are not independents",
+            "title-short": "Measuring party support",
+            "type": "article-journal",
+            "volume": "28"
+        }
+    ],
+    "project_biblios": []
+}

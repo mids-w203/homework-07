@@ -1,0 +1,92 @@
+## I think that it would be fun to have students work against data that 
+## they're actually a part of making. 
+## 
+## Possible questions: 
+## 
+## - How satisfied are you with your work? 
+##   - Extremely Satisfied 
+##   - Very satisfied 
+##   - Somewhat satisfied 
+##   - Neutral 
+##   - Somewhat dissatisfied 
+##   - Very dissatisfied 
+##   - Extremely dissatisfied 
+## - Do you find that your work is meaningful? 
+##   - Yes 
+##   - No 
+##   - Sometimes 
+## - How many hours do you spend engaged with your MIDS classwork each week? 
+##   Consider the time that you spend {reading; studying; watching lectures; homework; live session} 
+##   all together. 
+## 
+## Then, we can give them the data back as a list of text strings, that they 
+## have to convert into numbers, and then conduct tests against. 
+## 
+## But, the thing that we can do is to prime the data to show them the errors in their ways. 
+## 
+## 
+
+library(tidyverse) 
+library(readr)
+library(here)
+
+d <- read_csv(here("unit_07/data/satisfaction_survey.csv"))
+
+d <- d |> 
+  mutate(
+    job_satisfaction_12 = case_when(
+      job_satisfaction == "Extremely dissatisfied" ~ -12, 
+      job_satisfaction == "Very dissatisfied"      ~ -10, 
+      job_satisfaction == "Somewhat dissatisfied"  ~ -3, 
+      job_satisfaction == "Neutral"                ~ 0, 
+      job_satisfaction == "Somewhat satisfied"     ~ 3, 
+      job_satisfaction == "Very satisfied"         ~ 10, 
+      job_satisfaction == "Extremely Satisfied"    ~ 12), 
+    job_satisfaction_7 = case_when(
+      job_satisfaction == "Extremely dissatisfied" ~ 1, 
+      job_satisfaction == "Very dissatisfied"      ~ 2, 
+      job_satisfaction == "Somewhat dissatisfied"  ~ 3, 
+      job_satisfaction == "Neutral"                ~ 4, 
+      job_satisfaction == "Somewhat satisfied"     ~ 5, 
+      job_satisfaction == "Very satisfied"         ~ 6, 
+      job_satisfaction == "Extremely Satisfied"    ~ 7)
+    ) |> 
+  mutate(
+    job_meaningful_3 = case_when(
+      job_meaningful == "Yes"       ~ 2, 
+      job_meaningful == "Sometimes" ~ 1, 
+      job_meaningful == "No"        ~ 0)
+  ) 
+
+## Your colleague says that there's good reason to treat these as metric. 
+## You've been through this class, and you've got... comments. 
+## 
+## How would you make the argument to your colleague that the assignment 
+## to the values is arbitrary. And so, if you're OK mapping onto the {-12, 12} 
+## you could just as easily put it onto a {1,7} scale. 
+
+wilcox.test(job_satisfaction_7 ~ has_kids, data = d)
+t.test(job_satisfaction_7      ~ has_kids, data = d)
+t.test(job_satisfaction_12     ~ has_kids, data = d)
+
+
+## What, if anything, do you note about those text fields? 
+
+## How much time do people spend on classes? 
+
+d |> 
+  ggplot() + 
+  aes(x = hours_classwork, fill = has_kids) + 
+  geom_histogram(position = "dodge", bins = 10)
+
+## Do kids hurt your job satisfaction? 
+t.test(job_satisfaction_12 ~ has_kids, data = d)
+t.test(job_satisfaction_7  ~ has_kids, data = d)
+
+## Do people find their work meaningful? 
+t.test(job_meaningful_3 ~  has_kids, data = d)
+wilcox.test(job_meaningful_3 ~ has_kids, data = d)
+
+## How much studying to students do? 
+t.test(x = d$hours_classwork, mu = 12)
+t.test(hours_classwork ~ has_kids, data = d)

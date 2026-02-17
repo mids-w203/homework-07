@@ -1,0 +1,151 @@
+---
+title: "Homework 7"
+format: html
+---
+
+```{r load packages}
+#| message: false
+library(tidyverse) 
+library(here) 
+```
+
+```{r load data}
+d <- readr::read_csv(
+  file = here::here("data/satisfaction_survey.csv")
+)
+```
+
+# Job Satisfaction
+
+Suppose that you and the instructors are meeting to plan your analysis of the job satisfaction question, and you need to make several determinations before moving forward.
+
+## (Random) Variable Construction
+
+The outcome to the job satisfaction question is recorded in text form. For example, student `S001` has reported that they are `Very dissatisfied` with their work. 😭
+
+There's a robust discussion happening on the team, and they've turned to you in order to adjudicate the discussion.
+
+### Position 1
+
+Alex has made the following argument:
+
+> We have outcomes measured for each individual. These are literally the $\omega \in \Omega$ that we used when we were talking about random variables. We are free to pick the function $g(\omega):$ and then consequent to choosing that mapping we conduct the appropriate test for the $\mathbb{R}$ that the outcomes have been mapped to.
+>
+> In my field, it is common to map scales like this so that negative sentiment is mapped to negative numbers, positive sentiment to positive numbers. Furthermore, since we know that it is quite hard to get people to report *very* strong sentiment, when they do, we tend to map these strong sentiments in a non-linear way.
+>
+> So I propose that we map the "Extremely Dissatisfied/Satisfied" values to -12 and 12; the "Very Dissatisfied/Satisfied" to -10 and 10; the "Dissatisfied/Satisfied" to -3 and 3; and the "Neutral" to 0.
+
+### Position 2
+
+Gunnar agrees with Alex that we're free to make our function mapping, but he proposes a different function. Gunnar says,
+
+> Look, in my work we always map scales like this onto a scale that goes from 1-7. The "Extremely Dissatisfied" maps to a 1, and then moves through the scale up to "Extremely Satisfied" which is a 7.
+
+### Position 3
+
+Paul scratches his chin, smiles, and say says, "I don't know." And then continues,
+
+> I'm worried about imposing that structure. Why do we get to pick those values? Since I'm not sure about the appropriate scales between outcomes, I'm going to choose a test that allows for this non-linear outcome space.
+
+Alex and Gunnar, in tandem, reply, "Because we any mapping that is a valid function produces random variable, so our functions are both valid mappings!"
+
+Then, the instructors turn to you and ask, "What would you do?" 😬
+
+::: {.callout-note icon="false"}
+## Which Mapping?
+
+Write down what you believe to be the most appropriate mapping and an argument for why it is appropriate.
+
+*Your answer here.*
+:::
+
+## Encode Random Variables
+
+No matter what you answered in the previous question, do the work for this question.
+
+In the following code chunk, produce each of the mappings that were discussed by Alex, Gunnar, and Paul. Since Paul has said he is uncomfortable imposing structure, you don't have specific values pre-determined to map to; you'll have to make a choice.
+
+To do this work, use the `case_when` function to do the mapping. Look into the documentation for how this function works using `?case_when`. It is essentially, a clean implementation of bunch of `ifelse(..., ifelse(..., ifelse(..., )))`.
+
+```{r encode values}
+d <- d |> 
+  mutate(
+    job_satisfaction_12 = case_when(
+      # fill this in with the encoding alex proposes
+      job_satisfaction == "Extremely dissatisfied" ~ -12, 
+      job_satisfaction == "Very dissatisfied"      ~ -10
+      ), 
+    job_satisfaction_7  = case_when(
+      # fill this in with the encoding gunnar proposes
+      ), 
+    job_satisfaction_x = case_when(
+      # fill this in with the encoding paul proposes
+    )
+  )
+```
+
+## Tests With Encodings
+
+Alex and Gunnar have advocated that you encode this as continuous random variable whose space between values is meaningful. Alex has literally said, "Since we know that it is quite hard to get people to report *very* strong sentiment, when they do, we tend to map these strong sentiments in a non-linear way." And Gunnar has said, "I map it in a linear way."
+
+Alex and Gunnar are arguing that a `t.test` against their preferred data encoding is appropriate. Paul is steadfast about his outcomes and test, and so is arguing that a rank-test is appropriate. In the following three chunks, estimate each test.
+
+Before you conduct the tests, state your rejection criteria. Since you're going to be conducting some different forms of test, we think that a p-value is probably the most appropriate statistic to use as a rejection criteria.
+
+::: {.callout-note icon="false"}
+## Rejection Criteria
+
+For any test that produces a p-value that is smaller than `replace with your threshold` I will reject a null hypothesis.
+:::
+
+### Alex's Test
+
+What is an appropriate null hypothesis for this test?
+
+::: {.callout-note icon="false"}
+## Null Hypothesis
+
+'fill this in'
+:::
+
+```{r alexs test}
+test_alex <- 'fill this in'
+```
+
+### Gunnar's Test
+
+What is an appropriate null hypothesis for this test?
+
+::: {.callout-note icon="false"}
+## Null Hypothesis
+
+'fill this in'
+:::
+
+```{r gunnars test}
+test_gunnar <- 'fill this in'
+```
+
+### Paul's Test
+
+What is an appropriate null hypothesis for this test?
+
+::: {.callout-note icon="false"}
+## Null Hypothesis
+
+'fill this in'
+:::
+
+```{r pauls test}
+test_paul <- 'fill this in'
+```
+
+## Test Results
+
+What do you observe in each of these tests?
+
+```{r}
+test_alex
+test_gunnar
+test_paul
+```

@@ -1,0 +1,147 @@
+---
+title: "Homework 07: American National Election Study"
+format: 
+  html: 
+    self-contained: true
+bibliography: references.bib
+---
+
+```{r load packages}
+#| message: false
+#| echo: false  
+library(tidyverse) 
+```
+
+```{r set parameters}
+#| echo: false 
+theme_set(theme_minimal())
+```
+
+# Introduction
+
+Trust in fellow citizens is the social glue that binds people together [@putnam_2000]. Putnam argues that declining social club enrollment---bowling alone, rather than with a club of people---is evidence of reduced social capital and trust held between citiens. Political parties have a particular interest in understanding social trust among their members [@lee_2022; @suh_2013]. Social trust influences what messages are resonant, and what information channels are effective in political outreach. When social trust is high, positive messages between co-partisans might be especially effective; when it is low, negative broadcast messaging may drive more people to the polls. This study compares levels of trust between Democratic and Republican voters in the United States in an attempt to evaluate current levels of social trust.
+
+# Data
+
+The American National Election Studies (ANES) conducts regular surveys of voters in the United States. This analysis uses data from the 2024 ANES Time Series study, which took place immediately before and after the 2024 presidential election. The ANES uses multistage stratified cluster sampling, with some surveys conducted in-person and some over the web. In both modes, the sampling frame was derived from the U.S. Postal Service’s computerized delivery sequence file. Participants were offered financial awards of up to \$100 for completing the survey. This sampling process produces population representative estimates when analysis incorporates survey weights to adjust for different response rates across demographic characteristics. This analysis will not use the survey weights, potentially limiting generalizability to the US population.
+
+```{r load data}
+#| echo: true 
+# In this chunk, include the code to load your data. 
+```
+
+## Measuring Democrats and Republicans
+
+We use the variable `V241227x` (SUMMARY: PARTY ID) to operationalize whether a respondent is a Democrat and Republican. This variable measures party ID on a 7-point scale and is computed from responses on other questions. In line with political science literature, you decide to include people who "lean" towards a party as members [@petrocik_2009].
+
+::: callout-note
+## Measuring Democrats and Republicans
+
+-   Replace these bullets with a paragraph about why you measure how you do.
+
+-   For full credit, you should consider other ways that Democrats and Republicans could be operationalized, and give reasons that the alternatives were not followed. If there are gaps between the conceptual and operational definitions, you should explain what they are.
+
+-   You can delete this guidance in your final copy.
+:::
+
+## Measuring Social Trust
+
+We use the variable `V241234` (Summary: *How often can people be trusted?*) to operationalize social trust.
+
+::: callout-note
+## Measuring Social Trust
+
+-   Write a paragraph that explains and provides reasons for this operational decision. If there are gaps between the conceptual and operational definitions, you should explain what they are.
+
+-   You can delete this guidance in your final copy.
+:::
+
+# Analysis
+
+```{r plot trust and partisanship}
+#| fig-cap: "This should be an informative caption about your plot"
+#| label: fig-trust-partisanship
+#| echo: true
+
+# Create a plot that shows the relationship between respondents' 
+# Party Identification (i.e. Democrat and Republican) and social trust. 
+# Your plot should follow best practices such as: 
+#  (i) clearly labeling axes; 
+#  (ii) providing an informative title; 
+#  (iii) avoiding unnecessary "decoration". 
+
+# You can cross-reference this using @fig-trust-partisanship.
+
+# For that last point, this means ensuring that every color, facet, 
+# or visualization choice shows one (and only one) dimension of 
+# the data. It also means not duplicating information. For example, 
+# if you have columns labeled as Democrat and Republican, there is 
+# no need to also use color as a plot feature. 
+# (An exception to this would be if you are going to reuse a color 
+# palette later in your report, and at that point the color carries 
+# unique information.)
+
+# You can delete this guidance in your final copy.
+
+ggplot() + 
+  aes(x = 1:10, y = 1:10) + 
+  geom_point() + 
+  labs(
+    title = "What a great plot", 
+    x     = "An important feature", 
+    y     = "An important outcome"
+  )
+```
+
+## Test Choice and Justification
+
+We conduct a Wilcoxon rank-sum test. List and evaluate every assumption for this test. Additionally, evaluate the metric scale assumption and explain how this affects the best choice of hypothesis test. (3 points per assumption)
+
+::: callout-warning
+## Use class materials.
+
+**Please use criteria from our course: async, testing sheets, the textbook, live session notes.** Do not use assumptions found on the internet or given by chatbots. These assumptions are often unclear, and may be trying to provide some other kind of statistical guarantee than what we're concerned with in our course.
+
+You can delete this guidance in your final copy.
+:::
+
+::: callout-note
+## Test justification
+
+"Fill this in with your argument for why the Wilcoxon rank-sum test is the appropriate test to use in this case. You can delete this quoted sentence when you write your justification."
+:::
+
+## Test Results
+
+```{r conduct wilcox test}
+#| echo: true 
+# Conduct the appropriate test, storing results into an object so 
+# that you can reference test results programmatically. 
+# Although we might not expect to see this in a report, 
+# please also print the results of that test to the screen.
+
+wilcox_test_results <- "fill this in with the test" 
+wilcox_test_results
+```
+
+::: callout-note
+## Statistical Significance
+
+What do you observe from this test? If the data were drawn IID from the population of US citizens, what would you conclude are the patterns of social trust among Democrats and Republicans? Write one to two sentences that explain the statistical significance.
+
+Fill this in with your sentence(s) about statistical significance. You can pull from objects that are stored using the syntax-for an inline code-chunk: `r substr(wilcox_test_results, 1, 4)`.\
+\
+You will have to look at the structure of the `wilcox_test_results` object to pull relevant parts of the test that you want to report. This is possible using the `str()` function. You can look at documentation about [in-line code chunks](https://quarto.org/docs/computations/inline-code.html).
+
+You can delete this guidance in your final copy.
+:::
+
+::: callout-note
+## Practical Significance
+
+Write a paragraph that interprets the practical significance of your result. As part of this analysis, you must report some statement of your effect that is appropriate for your data type. The ultimate goal of this paragraph is to capture the magnitude of the effect in ways that a reader can easily interpret and place into context; this could be in terms of group medians, probability that a randomly sampled individual from one group would be more (or less) trusting than a randomly sampled individual from another group, or another appropriate comparison.
+
+You can delete this guidance in your final copy.
+:::
+
+### 
