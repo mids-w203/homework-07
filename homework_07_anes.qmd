@@ -19,7 +19,7 @@ theme_set(theme_minimal())
 
 # Introduction
 
-Trust in fellow citizens is the social glue that binds people together [@putnam_2000]. Putnam argues that declining social club enrollment---bowling alone, rather than with a club of people---is evidence of reduced social capital and trust held between citiens. Political parties have a particular interest in understanding social trust among their members [@lee_2022; @suh_2013]. Social trust influences what messages are resonant, and what information channels are effective in political outreach. When social trust is high, positive messages between co-partisans might be especially effective; when it is low, negative broadcast messaging may drive more people to the polls. This study compares levels of trust between Democratic and Republican voters in the United States in an attempt to evaluate current levels of social trust.
+Trust in fellow citizens is the social glue that binds people together [@putnam_2000]. Putnam argues that declining social club enrollment---bowling alone, rather than with a club of people---is evidence of reduced social capital and trust held between citziens. Political parties have a particular interest in understanding social trust among their members [@lee_2022; @suh_2013]. Social trust influences what messages are resonant, and what information channels are effective in political outreach. When social trust is high, positive messages between co-partisans might be especially effective; when it is low, negative broadcast messaging may drive more people to the polls. This study compares levels of trust between Democratic and Republican voters in the United States in an attempt to evaluate current levels of social trust.
 
 # Data
 
